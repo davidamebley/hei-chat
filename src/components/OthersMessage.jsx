@@ -23,7 +23,7 @@ const OthersMessage = ({ message, lastMessage }) => {
                         {message.text}
                     </div>
                 )
-            };
+            }
         </div>
     )
 }
