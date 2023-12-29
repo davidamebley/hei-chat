@@ -8,6 +8,9 @@ You can access a live demo of HeiChat at:
 
 https://heichat.netlify.app/
 
+## Screenshots
+<img width="1440" alt="Screenshot 2023-12-29 at 7 41 04" src="https://github.com/davidamebley/hei-chat/assets/81444138/3d5b620b-1437-4266-aee8-0e3b18eb1d26">
+
 ## Features
 
 - Real-time chat with other users
