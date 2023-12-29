@@ -36,6 +36,9 @@ const LoginForm = () => {
                         </button>
                     </div>
                     <h2 className={`error ${error ? 'visible' : 'invisible'}`}>{error}</h2>
+                    <p className="guest-info">
+                        Guests can log in using username "guest" and password "1234".
+                    </p>
                 </form>
             </div>
         </div>
