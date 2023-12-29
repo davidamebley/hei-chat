@@ -4,11 +4,12 @@ import axios from "axios";
 const LoginForm = () => {
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const authObject = { 'Project-ID': process.env.REACT_APP_PROJECT_ID, 'User-Name': process.env.REACT_APP_USER_NAME, 'User-Secret': process.env.REACT_APP_USER_SECRET };
+        const authObject = { 'Project-ID': process.env.REACT_APP_PROJECT_ID, 'User-Name': userName, 'User-Secret': password };
 
         try {
             await axios.get('https://api.chatengine.io/chats', { headers: authObject });
@@ -18,7 +19,7 @@ const LoginForm = () => {
             // Reload page to ensure that the user is logged in
             window.location.reload();
         } catch (error) {
-
+            setError('Please check your credentials and try again.');
         }
     };
 
@@ -34,6 +35,7 @@ const LoginForm = () => {
                             <span>Begin a Conversation</span>
                         </button>
                     </div>
+                    <h2 className={`error ${error ? 'visible' : 'invisible'}`}>{error}</h2>
                 </form>
             </div>
         </div>
